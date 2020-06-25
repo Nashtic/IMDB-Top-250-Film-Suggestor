@@ -4,10 +4,9 @@
 
 sympy ve math kütüphaneleri import edilerek projede kullanılır.
 
-'''
 import sympy as sym
 import math
-'''
+
 
 ## Projenin Çalışma Prensibi
 
@@ -43,12 +42,12 @@ Bu fonksiyonda ise yine bir matris oluturuyoruz. 3. dereceden polinom yaklaştı
 için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yazdırıyoruz.
 Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şekilde ekrana yazdırıyoruz.
 
-'''
+
 print("Polinom Denklemi Sonucumuz: \n")                #Polinomların denklem sonuçları yazdırılır.
     equation = coefficients[3] * x ** 3 + coefficients[2] * x ** 2 + coefficients[1] * x + coefficients[0]
 
     sym.pprint(equation)
-'''
+
 
 Sonrasında tanımladığımız function(x) fonksiyonunu kullanarak polinomlu türev sonucumuzu buluyoruz.
 x0 olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
