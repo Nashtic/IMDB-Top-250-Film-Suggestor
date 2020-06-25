@@ -4,7 +4,7 @@
 
 sympy ve math kütüphaneleri import edilerek projede kullanılır.
 
-'''bash
+'''
 import sympy as sym
 import math
 '''
@@ -43,7 +43,7 @@ Bu fonksiyonda ise yine bir matris oluturuyoruz. 3. dereceden polinom yaklaştı
 için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yazdırıyoruz.
 Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şekilde ekrana yazdırıyoruz.
 
-'''bash
+'''
 print("Polinom Denklemi Sonucumuz: \n")                #Polinomların denklem sonuçları yazdırılır.
     equation = coefficients[3] * x ** 3 + coefficients[2] * x ** 2 + coefficients[1] * x + coefficients[0]
 
