@@ -43,7 +43,7 @@ Bu fonksiyonumuzda bizden ödevde istendiği üzere 3. dereceden polinoma yakla�
 en son sütünlarını atılır. writeDerivativesWithPolynom fonksiyonumuzu kullanarak kullanıcıya
 ekranda gösterilecek değerlerden polinomsuz türev sonucu hariç hepsi ekrana bastırılır.
 
-### writeDerivativesWithPolynom(row, rowValues):
+### writeDerivativesWithPolynom():
 
 Bu fonksiyonda ise yine bir matris oluturuyoruz. 3. dereceden polinom yaklaştırması yaptığımız
 için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yazdırıyoruz.
@@ -56,8 +56,8 @@ Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şeki
     sym.pprint(equation)
 
 
-Sonrasında bu fonksiyon içerisinde ayrıca bir fonksiyon olarak tanımladığımız function(x) fonksiyonunu kullanarak 
-polinomlu türev sonucumuzu buluyoruz. x0 olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
+Sonrasında tanımladığımız function(x) fonksiyonunu kullanarak polinomlu türev sonucumuzu buluyoruz.
+x0 olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
 h değerimiz, polinom kullandığımız için 0.01 gibi dar bir aralıkta alabiliyoruz.
 
 ### derivativeWithOutPolynom():
@@ -74,12 +74,14 @@ kısaca açıklanmıştır. Yorumlar yorum.txt adlı bir dosya açılarak içeri
 
 ## Kodun Çalıştırıldığı Yer
 
-readFile() fonksiyonumuz ile verileri asallar.txt dosyamızdan satır satır çekerek asalDiziDegerler dizimize int değer olarak ekliyoruz.
+	readFile()                             # Değerlerin bulunduğu asallar.txt dosyasından veriler satır satır çekilir.
+	findValues(0, len(asalDiziDegerler))   # Katsayılar, polinomlu türev ve polinom denklemi değerlerini ekrana yazdırır.
+	derivativeWithOutPolynom()             # Polinomsuz türev değerini ekrana yazdırır.
+	kodYorumlari()                         # Yorumlar, yorum.txt dosyasına yazılır.
 
-findValues fonksiyonumuz ile polinomlu türev, katsayılar ve polinom denklemi değerlerini ekrana yazdırılır.
-
-derivativeWithOutPolynom fonksiyonu ile polinomsuz türev hesabı yapılarak değeri ekrana yazdırılır.
-
+readFile() fonksiyonumuz ile verileri txt dosyamızdan okuyoruz.
+findValues fonksiyonumuz ile polinomlu türev değerimizi, katsayılarını ve polinom denklemini ekrana
+yazdırıyoruz.
+derivativeWithOutPolynom fonksiyonu ile polinomsuz türev hesabı yapılarak ekrana yazdırılır.
 kodYorumları() fonksiyonu çalıştırılarak yorum.txt dosyası oluşturularak içine bu yorumlar yazılır.
-
 Başarıyla programdan çıkış yapılır.
