@@ -1,3 +1,5 @@
+## Selahattin Ahmed Ataşoğlu - 190401090
+
 # Bilimsel Hesaplama Bütünleme Ödevi
 
 İçerisine asal sayı değerleri satır satır olacak biçimde yazılmış asallar.txt dosyasında bulunan
@@ -49,7 +51,7 @@ Bu fonksiyonda ise yine bir matris oluşturuyoruz. 3. dereceden polinom yaklaşt
 için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yazdırıyoruz.
 Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şekilde ekrana yazdırıyoruz. 
 
-#### Not: Polinom denklemini, yapmış olduğum hesaplamaların bir sağlaması olarak koda eklemek istedim ve bundan dolayı ekrana yazdırdım.
+#### Not: Yapmış olduğum katsayı hesaplamaları sonucunda ortaya çıkan polinom denklemini göstermek istedim ve bundan dolayı ekrana yazdırdım.
 
 
     print("Polinom Denklemi Sonucumuz: \n")                #Polinomların denklem sonuçları yazdırılır.
