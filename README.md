@@ -4,8 +4,8 @@
 
 sympy ve math kütüphaneleri import edilerek projede kullanılır.
 
-import sympy as sym
-import math
+	import sympy as sym
+	import math
 
 
 ## Projenin Çalışma Prensibi
@@ -43,7 +43,7 @@ için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yaz
 Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şekilde ekrana yazdırıyoruz.
 
 
-print("Polinom Denklemi Sonucumuz: \n")                #Polinomların denklem sonuçları yazdırılır.
+    print("Polinom Denklemi Sonucumuz: \n")                #Polinomların denklem sonuçları yazdırılır.
     equation = coefficients[3] * x ** 3 + coefficients[2] * x ** 2 + coefficients[1] * x + coefficients[0]
 
     sym.pprint(equation)
