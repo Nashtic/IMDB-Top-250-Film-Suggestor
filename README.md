@@ -74,9 +74,12 @@ kısaca açıklanmıştır. Yorumlar yorum.txt adlı bir dosya açılarak içeri
 
 ## Kodun Çalıştırıldığı Yer
 
-readFile() fonksiyonumuz ile verileri txt dosyamızdan okuyoruz.
-findValues fonksiyonumuz ile polinomlu türev değerimizi, katsayılarını ve polinom denklemini ekrana
-yazdırıyoruz.
-derivativeWithOutPolynom fonksiyonu ile polinomsuz türev hesabı yapılarak ekrana yazdırılır.
+readFile() fonksiyonumuz ile verileri asallar.txt dosyamızdan satır satır çekerek asalDiziDegerler dizimize int değer olarak ekliyoruz.
+
+findValues fonksiyonumuz ile polinomlu türev, katsayılar ve polinom denklemi değerlerini ekrana yazdırılır.
+
+derivativeWithOutPolynom fonksiyonu ile polinomsuz türev hesabı yapılarak değeri ekrana yazdırılır.
+
 kodYorumları() fonksiyonu çalıştırılarak yorum.txt dosyası oluşturularak içine bu yorumlar yazılır.
+
 Başarıyla programdan çıkış yapılır.
