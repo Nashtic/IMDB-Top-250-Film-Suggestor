@@ -1,5 +1,10 @@
 # Bilimsel Hesaplama Bütünleme Ödevi
 
+İçerisine asal sayı değerleri satır satır olacak biçimde yazılmış asallar.txt dosyasında bulunan
+asal sayı değerlerini 3. dereceden polinoma yakınlaştıran ve istenilen a değerine
+(okul numarasının son iki hanesi) göre polinomlu ve polinomsuz olmak üzere
+iki farklı şekilde türevlerini bulan programın yazılması beklenmektedir.
+
 ## Kullanılan Kütüphaneler
 
 sympy ve math kütüphaneleri import edilerek projede kullanılır.
@@ -10,8 +15,8 @@ sympy ve math kütüphaneleri import edilerek projede kullanılır.
 
 ## Projenin Çalışma Prensibi
 
-Yazmış olduğumuz kod içerisinde 8 farklı fonksiyon kullanılmıştır.
-Bu fonksiyonları şöyle sıralayabiliriz:
+Yazmış olduğumuz kod içerisinde 8 farklı fonksiyon kullanılmıştır. Yazmış olduğum kodun kullanılış
+şeklini, kullanmış olduğum aşağıdaki fonksiyonları ve kullanılış amaçlarını anlatarak şöyle açıklayabiliriz:
 
 ### readfile():
 
@@ -21,6 +26,8 @@ Bu fonksiyonumuzda asallar.txt dosyası içerisinde bulunan asal sayı değerler
 ### matrixWithGauss(Z):
 
 Bu fonksiyonumuzda ise Gauss yöntemiyle matrisler kullanılarak hesaplamalar yapılır.
+Gauss yöntemi sayesinde findValues() fonksiyonu içerisinde hesaplamasını yapmış
+olduğumuz katsayıların değerleri bulunmuş olur.
 
 ### correlation(myLastResults):
 
@@ -63,7 +70,7 @@ Hesaplama yapılırken direkt olarak asal sayı değerlerimizi atmış olduğumu
 ### kodYorumlari():
 
 Polinomlu ve polinomsuz türev hesaplamalarının arasındaki bu farkın neden olduğu yorum satırlarıyla
-kısaca açıklanmıştır.
+kısaca açıklanmıştır. Yorumlar yorum.txt adlı bir dosya açılarak içerisine yazılmıştır.
 
 ## Kodun Çalıştırıldığı Yer
 
