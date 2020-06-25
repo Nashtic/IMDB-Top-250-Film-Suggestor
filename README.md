@@ -67,7 +67,8 @@ h değerimiz, polinom kullandığımız için 0.01 gibi dar bir aralıkta alabil
 Bu fonksiyonda ise polinomsuz bir şekilde türev hesaplaması yaparak ekrana yazdırıyoruz.
 Polinomlu halinden farklı olarak h değerini polinomsuz olduğu için en iyi şart olarak 1 alabiliyoruz.
 Hesaplama yapılırken direkt olarak asal sayı değerlerimizi atmış olduğumuz asalDiziDegerler dizisinden
-çekerek gerekli hesaplamaları yapıyoruz.
+verilerimizi çekerek gerekli hesaplamaları yapıyoruz. Ayrıca dizimiz index[0]'dan başladığından, 
+istenen değeri bulabilmemiz için a değernin bir eksiğini almamız gerekir.
 
 ### kodYorumlari():
 
