@@ -57,7 +57,7 @@ Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şeki
 
 
 Sonrasında tanımladığımız function(x) fonksiyonunu kullanarak polinomlu türev sonucumuzu buluyoruz.
-x0 olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
+a olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
 h değerimiz, polinom kullandığımız için 0.01 gibi dar bir aralıkta alabiliyoruz.
 
 ### derivativeWithOutPolynom():
@@ -79,9 +79,21 @@ kısaca açıklanmıştır. Yorumlar yorum.txt adlı bir dosya açılarak içeri
 	derivativeWithOutPolynom()             # Polinomsuz türev değerini ekrana yazdırır.
 	kodYorumlari()                         # Yorumlar, yorum.txt dosyasına yazılır.
 
-readFile() fonksiyonumuz ile verileri txt dosyamızdan okuyoruz.
-findValues fonksiyonumuz ile polinomlu türev değerimizi, katsayılarını ve polinom denklemini ekrana
-yazdırıyoruz.
+readFile() fonksiyonumuz ile verileri asallar.txt dosyamızdan okuyoruz ve diziye aktarıyoruz.
+
+findValues fonksiyonumuz ile 3. dereceden yaklaştırmamız yapılır ve değerler bulunur. 
+Katsayı değerleri matrixWithGauss fonksiyonumuz ile bulunarak coefficient değerine atanır.
+Sonuçlarımızın bulunduğu myResultsArray dizisinin correlation'ı alınır, r değerine atanır.
+r değerleri arrayForValues dizisine atanır. Son olarak ise, polinomlu türev değerimizi,
+katsayıların ve polinom denkleminin değerlerini writeDerivativesWithPolynom ile ekrana yazdırıyoruz.
+writeDerivativesWithPolynom'da ise önce bir matris oluşturuyoruz. Katsayı değerlerini yine matrixWithGauss
+fonksiyonumuz ile buluyoruz ve bu değerleri coefficients dizimize aktarıyoruz.
+Daha sonra katsayılar, polinom denklemi sonucu yazdırılır. Akabinde gelen function fonksiyonumuz ile
+üçüncü dereceden polinomumuz oluşturulur. Polinomlu türev değeri, function fonksiyonundan sonra
+hesaplanarak ekrana yazdırılır. Bu hesaplama sırasında a = 90 ve h = 0.01 alınır.
+
 derivativeWithOutPolynom fonksiyonu ile polinomsuz türev hesabı yapılarak ekrana yazdırılır.
+
 kodYorumları() fonksiyonu çalıştırılarak yorum.txt dosyası oluşturularak içine bu yorumlar yazılır.
+
 Başarıyla programdan çıkış yapılır.
