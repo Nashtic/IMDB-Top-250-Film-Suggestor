@@ -88,7 +88,7 @@ r değerleri arrayForValues dizisine atanır. Son olarak ise, polinomlu türev d
 katsayıların ve polinom denkleminin değerlerini writeDerivativesWithPolynom ile ekrana yazdırıyoruz.
 writeDerivativesWithPolynom'da ise önce bir matris oluşturuyoruz. Katsayı değerlerini yine matrixWithGauss
 fonksiyonumuz ile buluyoruz ve bu değerleri coefficients dizimize aktarıyoruz.
-Daha sonra katsayılar, polinom denklemi sonucu yazdırılır. Akabinde gelen function fonksiyonumuz ile
+Daha sonra katsayılar ve polinom denklemi sonucu yazdırılır. Akabinde gelen function fonksiyonumuz ile
 üçüncü dereceden polinomumuz oluşturulur. Polinomlu türev değeri, function fonksiyonundan sonra
 hesaplanarak ekrana yazdırılır. Bu hesaplama sırasında a = 90 ve h = 0.01 alınır.
 
