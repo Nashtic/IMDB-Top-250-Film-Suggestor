@@ -43,7 +43,7 @@ Bu fonksiyonumuzda bizden ödevde istendiği üzere 3. dereceden polinoma yakla�
 en son sütünlarını atılır. writeDerivativesWithPolynom fonksiyonumuzu kullanarak kullanıcıya
 ekranda gösterilecek değerlerden polinomsuz türev sonucu hariç hepsi ekrana bastırılır.
 
-### writeDerivativesWithPolynom():
+### writeDerivativesWithPolynom(row, rowValues):
 
 Bu fonksiyonda ise yine bir matris oluturuyoruz. 3. dereceden polinom yaklaştırması yaptığımız
 için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yazdırıyoruz.
