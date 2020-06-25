@@ -1,4 +1,4 @@
-## Selahattin Ahmed Ataşoğlu - 190401090
+### Selahattin Ahmed Ataşoğlu - 190401090
 
 # Bilimsel Hesaplama Bütünleme Ödevi
 
@@ -30,12 +30,6 @@ Bu fonksiyonumuzda asallar.txt dosyası içerisinde bulunan asal sayı değerler
 Bu fonksiyonumuzda ise Gauss yöntemiyle matrisler kullanılarak hesaplamalar yapılır.
 Gauss yöntemi sayesinde findValues() fonksiyonu içerisinde hesaplamasını yapmış
 olduğumuz katsayıların değerleri bulunmuş olur.
-
-### correlation(myLastResults):
-
-Bu fonksiyonumuzda, polinoma yaklaştırma methodunda olduğu üzere, korelasyon katsayısı
-hesaplaması formülündeki işlemler burada yapılır. Burada r değeri bulunur. 
-(r^2 = (St - Sr) / St)
 
 ### findValues(row, rowValues):
 
@@ -88,9 +82,7 @@ readFile() fonksiyonumuz ile verileri asallar.txt dosyamızdan okuyoruz ve diziy
 
 findValues fonksiyonumuz ile 3. dereceden yaklaştırmamız yapılır ve değerler bulunur. 
 Katsayı değerleri matrixWithGauss fonksiyonumuz ile bulunarak coefficient değerine atanır.
-Sonuçlarımızın bulunduğu myResultsArray dizisinin correlation'ı alınır, r değerine atanır.
-r değerleri arrayForValues dizisine atanır. Son olarak ise, polinomlu türev değerimizi,
-katsayıların ve polinom denkleminin değerlerini writeDerivativesWithPolynom ile ekrana yazdırıyoruz.
+Son olarak ise, polinomlu türev değerimizi, katsayıların ve polinom denkleminin değerlerini writeDerivativesWithPolynom ile ekrana yazdırıyoruz.
 writeDerivativesWithPolynom'da ise önce bir matris oluşturuyoruz. Katsayı değerlerini yine matrixWithGauss
 fonksiyonumuz ile buluyoruz ve bu değerleri coefficients dizimize aktarıyoruz.
 Daha sonra katsayılar ve polinom denklemi sonucu yazdırılır. Akabinde gelen function fonksiyonumuz ile
@@ -102,3 +94,9 @@ derivativeWithOutPolynom fonksiyonu ile polinomsuz türev hesabı yapılarak ekr
 kodYorumları() fonksiyonu çalıştırılarak yorum.txt dosyası oluşturularak içine bu yorumlar yazılır.
 
 Başarıyla programdan çıkış yapılır.
+
+## Kodun Çalıştırılabilmesi İçin Gereksinimler
+
+phyton3 versiyonu ile derlenmelidir. sympy ve math kütüphanesi kullanıldığı için bu kütüphanelerin
+konsol üzerinden gerekli indirmelerinin ya da herhangi bir phyton derleyicisi kullanılıyor ise 
+bu kütüphanelerin eklenmesi gerekmektedir. 
