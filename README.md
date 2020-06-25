@@ -56,8 +56,8 @@ Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şeki
     sym.pprint(equation)
 
 
-Sonrasında tanımladığımız function(x) fonksiyonunu kullanarak polinomlu türev sonucumuzu buluyoruz.
-x0 olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
+Sonrasında bu fonksiyon içerisinde ayrıca bir fonksiyon olarak tanımladığımız function(x) fonksiyonunu kullanarak 
+polinomlu türev sonucumuzu buluyoruz. x0 olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
 h değerimiz, polinom kullandığımız için 0.01 gibi dar bir aralıkta alabiliyoruz.
 
 ### derivativeWithOutPolynom():
