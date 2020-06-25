@@ -1,4 +1,4 @@
-### Selahattin Ahmed Ataşoğlu - 190401090
+## Selahattin Ahmed Ataşoğlu - 190401090
 
 # Bilimsel Hesaplama Bütünleme Ödevi
 
@@ -9,10 +9,9 @@ iki farklı şekilde türevlerini bulan programın yazılması beklenmektedir.
 
 ## Kullanılan Kütüphaneler
 
-sympy ve math kütüphaneleri import edilerek projede kullanılır.
+sympy kütüphanesi import edilerek projede kullanılır.
 
 	import sympy as sym
-	import math
 
 
 ## Projenin Çalışma Prensibi
@@ -64,7 +63,7 @@ Bu fonksiyonda ise polinomsuz bir şekilde türev hesaplaması yaparak ekrana ya
 Polinomlu halinden farklı olarak h değerini polinomsuz olduğu için en iyi şart olarak 1 alabiliyoruz.
 Hesaplama yapılırken direkt olarak asal sayı değerlerimizi atmış olduğumuz asalDiziDegerler dizisinden
 verilerimizi çekerek gerekli hesaplamaları yapıyoruz. Ayrıca dizimiz index[0]'dan başladığından, 
-istenen değeri bulabilmemiz için a değernin bir eksiğini almamız gerekir.
+istenen değeri bulabilmemiz için a değerinin bir eksiğini almamız gerekir.
 
 ### kodYorumlari():
 
@@ -97,6 +96,6 @@ Başarıyla programdan çıkış yapılır.
 
 ## Kodun Çalıştırılabilmesi İçin Gereksinimler
 
-phyton3 versiyonu ile derlenmelidir. sympy ve math kütüphanesi kullanıldığı için bu kütüphanelerin
+phyton3 versiyonu ile derlenmelidir. sympy kütüphanesi kullanıldığı için bu kütüphanenin
 konsol üzerinden gerekli indirmelerinin ya da herhangi bir phyton derleyicisi kullanılıyor ise 
-bu kütüphanelerin eklenmesi gerekmektedir. 
+bu kütüphanenin eklenmesi gerekmektedir. 
