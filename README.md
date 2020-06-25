@@ -45,9 +45,10 @@ ekranda gösterilecek değerlerden polinomsuz türev sonucu hariç hepsi ekrana 
 
 ### writeDerivativesWithPolynom(row, rowValues):
 
-Bu fonksiyonda ise yine bir matris oluturuyoruz. 3. dereceden polinom yaklaştırması yaptığımız
+Bu fonksiyonda ise yine bir matris oluşturuyoruz. 3. dereceden polinom yaklaştırması yaptığımız
 için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yazdırıyoruz.
-Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şekilde ekrana yazdırıyoruz.
+Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şekilde ekrana yazdırıyoruz. Polinom
+denklemini, yapmış olduğum hesaplamaların bir sağlaması olarak koda eklemek istedim ve bundan dolayı ekrana yazdırdım.
 
 
     print("Polinom Denklemi Sonucumuz: \n")                #Polinomların denklem sonuçları yazdırılır.
