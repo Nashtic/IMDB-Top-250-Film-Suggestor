@@ -24,38 +24,38 @@ Yazmış olduğumuz kod içerisinde 8 farklı fonksiyon kullanılmıştır. Yazm
 Bu fonksiyonumuzda asallar.txt dosyası içerisinde bulunan asal sayı değerleri tek tek çekilir,
 çekilen değerler asalDiziDegerler adlı diziye int tipinde olacak şekilde aktarılır.
 
-### matrixWithGauss(Z):
+### createMatrix():
 
-Bu fonksiyonumuzda ise Gauss yöntemiyle matrisler kullanılarak hesaplamalar yapılır.
-Gauss yöntemi sayesinde findValues() fonksiyonu içerisinde hesaplamasını yapmış
-olduğumuz katsayıların değerleri bulunmuş olur.
+Bu fonksiyonumuzda 4'e 4'lük bir matris oluştururuz.
 
-### findValues(row, rowValues):
+### matrixWithGauss():
 
-Bu fonksiyonumuzda bizden ödevde istendiği üzere 3. dereceden polinoma yaklaştırma yapılır.
-4'e 4'lük bir matris oluşturulur. x'in üssü artacak şekilde diğer denklem değerleri
-(y*x, y*x^2, y*x^3 ...) bulunur. Fonksiyonun devamında bulduğumuz bu sonuçlar matrisin
-en son sütünlarını atılır. writeDerivativesWithPolynom fonksiyonumuzu kullanarak kullanıcıya
-ekranda gösterilecek değerlerden polinomsuz türev sonucu hariç hepsi ekrana bastırılır.
+Bu fonksiyonumuzda ise Gauss yöntemiyle matrisler kullanılarak hesaplamalar yapılır. İçerisinde
+matris oluşturmamız gerektiği için bu matrisi createMatrix() fonksiyonu ile yapıyoruz.
+Gauss yöntemi sayesinde içerisinde hesaplamasını yapmış olduğumuz katsayıların değerleri bulunur
+ve bu değerler başta oluşturduğumuz coefficients dizisine aktarılır. Devamında ise bulduğumuz bu 
+katsayıların değerlerinin ekrana yazdırımı sağlanır.
 
-### writeDerivativesWithPolynom(row, rowValues):
+### selectRowGetValue(row, rowValue):
 
-Bu fonksiyonda ise yine bir matris oluşturuyoruz. 3. dereceden polinom yaklaştırması yaptığımız
-için 3. dereceden yapılan polinom yaklaştırması katsayılarını ekrana yazdırıyoruz.
-Bu katsayılar ile polinom denklemimizi günlük hayatta kullandığımız şekilde ekrana yazdırıyoruz. 
+Bu fonksiyonda ise parametre olarak satır(row) ve satırda bulunan asal sayı değerini(rowValue)
+alırız. "row" değeri 0 haricinde bir değer olduğu sürece bu hesaplamalar devam eder. "row" değeri
+0'a eşitlendiğinde ise else'e girilir ve bu kısımdaki işlemler yapılır.
 
-#### Not: Yapmış olduğum katsayı hesaplamaları sonucunda ortaya çıkan polinom denklemini göstermek istedim ve bundan dolayı ekrana yazdırdım.
+###function(x):
 
+Bu fonksiyonda 3. dereceden polinomumuz tanımlanır. Bu polinom değerimiz derivativeWithPolynom()
+fonksiyonunda polinolu türev alma işlemi için kullanılacaktır.
 
-    print("Polinom Denklemi Sonucumuz: \n")                #Polinomların denklem sonuçları yazdırılır.
-    equation = coefficients[3] * x ** 3 + coefficients[2] * x ** 2 + coefficients[1] * x + coefficients[0]
+### derivativeWithPolynom():
 
-    sym.pprint(equation)
+Bu fonksiyonda ise polinomlu türev hesaplama işlemimiz yapılır. a değeri okul numaramdan dolayı 90
+alıyorum. h değerimiz ise polinomlu olarak türev alma işlemi yaptığımız için 0.01 gibi dar bir aralıkta
+alabiliyoruz. xprime hesaplamamızda ise sayısal türev almak için yukarıdaki "function" fonksiyonumuzu
+kullanarak polinomlu sayısal türev değerimizi buluyoruz. Burada kullanmış olduğumuz sayısal türev alma
+denklemimiz ise "Merkezi Farklar ile Birinci Dereceden Türev Alma" denklemidir. 
 
-
-Sonrasında tanımladığımız function(x) fonksiyonunu kullanarak polinomlu türev sonucumuzu buluyoruz.
-a olarak aldığımız değer okul numaramın sonu 90 ile bittiği için 90 olarak alıyorum.
-h değerimiz, polinom kullandığımız için 0.01 gibi dar bir aralıkta alabiliyoruz.
+	f(xi)' = delta f(x) / delta x = f(xi + h) - f(xi - h) / 2h
 
 ### derivativeWithOutPolynom():
 
@@ -63,34 +63,54 @@ Bu fonksiyonda ise polinomsuz bir şekilde türev hesaplaması yaparak ekrana ya
 Polinomlu halinden farklı olarak h değerini polinomsuz olduğu için en iyi şart olarak 1 alabiliyoruz.
 Hesaplama yapılırken direkt olarak asal sayı değerlerimizi atmış olduğumuz asalDiziDegerler dizisinden
 verilerimizi çekerek gerekli hesaplamaları yapıyoruz. Ayrıca dizimiz index[0]'dan başladığından, 
-istenen değeri bulabilmemiz için a değerinin bir eksiğini almamız gerekir.
+istenen değeri bulabilmemiz için a değerinin bir eksiğini almamız gerekir. Yukarıda kullanılan
+sayısal türev alma denklemi aynı şekilde burada da kullanılır.
 
-### kodYorumlari():
+### comments():
 
 Polinomlu ve polinomsuz türev hesaplamalarının arasındaki bu farkın neden olduğu yorum satırlarıyla
 kısaca açıklanmıştır. Yorumlar yorum.txt adlı bir dosya açılarak içerisine yazılmıştır.
 
 ## Kodun Çalıştırıldığı Yer
 
-	readFile()                             # Değerlerin bulunduğu asallar.txt dosyasından veriler satır satır çekilir.
-	findValues(0, len(asalDiziDegerler))   # Katsayılar, polinomlu türev ve polinom denklemi değerlerini ekrana yazdırır.
-	derivativeWithOutPolynom()             # Polinomsuz türev değerini ekrana yazdırır.
-	kodYorumlari()                         # Yorumlar, yorum.txt dosyasına yazılır.
+	readFile()                                      # Değerlerin bulunduğu asallar.txt dosyasından veriler satır satır çekilir.
+	selectRowGetValue(109, asalDiziDegerler[108])   # Seçilen satır ve o satırdaki asal sayı değerine göre hesaplama yapar.
+	writePolynomEquation(x)				# Polinom denklemi günlük hayatta kullandığımız şekil ekrana yazdırılır.
+	derivativeWithPolynom()                         # Polinomlu türev değerlerini ekrana yazdırır.
+	derivativeWithOutPolynom()                      # Polinomsuz türev değerini ekrana yazdırır.
+	comments()                                      # Yorumlar, yorum.txt dosyasına yazılır.
 
 readFile() fonksiyonumuz ile verileri asallar.txt dosyamızdan okuyoruz ve diziye aktarıyoruz.
 
-findValues fonksiyonumuz ile 3. dereceden yaklaştırmamız yapılır ve değerler bulunur. 
-Katsayı değerleri matrixWithGauss fonksiyonumuz ile bulunarak coefficient değerine atanır.
-Son olarak ise, polinomlu türev değerimizi, katsayıların ve polinom denkleminin değerlerini writeDerivativesWithPolynom ile ekrana yazdırıyoruz.
-writeDerivativesWithPolynom'da ise önce bir matris oluşturuyoruz. Katsayı değerlerini yine matrixWithGauss
-fonksiyonumuz ile buluyoruz ve bu değerleri coefficients dizimize aktarıyoruz.
-Daha sonra katsayılar ve polinom denklemi sonucu yazdırılır. Akabinde gelen function fonksiyonumuz ile
-üçüncü dereceden polinomumuz oluşturulur. Polinomlu türev değeri, function fonksiyonundan sonra
-hesaplanarak ekrana yazdırılır. Bu hesaplama sırasında a = 90 ve h = 0.01 alınır.
+createMatrix() fonksiyonu ile 4'e 4'lük boyutlarında bir matris oluşuturulur.
+
+matrixWithGauss() fonksiyonunda öncelikle oluşturmamız gereken matris, createMatrix ile oluşturulur.
+Daha sonra oluşturulan bu matrisin satır ve sütun uzunluklarına göre "row, column" değerleri bulunur.
+Katsayı değerleri bulunur ve bu katsayı değerleri, coefficients adı verdiğimiz diziye aktarılır.
+Son olarak katsayı değerleri kullanıcıya gösterilmek üzere ekrana yazdırılır.
+
+writePolynomEquation() fonksiyonunda ise 3. dereceden oluşturduğumuz polinom denklemi "equation"
+değişkenine atanır. Daha sonra bu değer sym.pprint ile günlük hayattaki kullanım şekline uygun olarak
+ekrana yazdırılır.
+
+selectRowGetValue(..., ...) ile seçilen satır ve seçilen satırda bulunan asal sayı değeri ile işlemler
+yapılır. "row" değeri 0 olmadığı sürece if içerisinde belirlenen işlemler yapılır, row'un 0 olması durumunda
+else'e girilerek matrixWithGauss() işlemi yaptırılır.
+
+function(x) ile polinomlu türev alacağımız derivativeWithPolynom fonksiyonu için 3. dereceden polinom
+denklemi oluşturulur ve değeri geri döndürülür.
+
+derivativeWithPolynom'da "a" değerimizi okul numaramdan dolayı 90 olarak alıyoruz. "h" değerimizi ise
+polinomlu türev alma işlemi yaptığımız için 0.01 gibi daha dar bir aralıkta alıyoruz. Polinomlu
+türev sonucunu bulabilmek için function fonksiyonunu ve Merkezi Farklar ile Birinci Dereceden
+türev alma denklemini kullanırız. Çıkan sonuç ekrana yazdırılır.
 
 derivativeWithOutPolynom fonksiyonu ile polinomsuz türev hesabı yapılarak ekrana yazdırılır.
+"h" değerimiz, bu hesaplamanın polinomsuz olmasından dolayı en az 1 değerini alabilmektedir.
+Polinomlu türev alma fonksiyonundaki gibi burada da Merkezi Farklar ile Birinci Dereceden türev alma
+denklemi kullanılır.
 
-kodYorumları() fonksiyonu çalıştırılarak yorum.txt dosyası oluşturularak içine bu yorumlar yazılır.
+comments() fonksiyonu çalıştırılarak yorum.txt dosyası oluşturulur ve içersine bu yorumlar yazılır.
 
 Başarıyla programdan çıkış yapılır.
 
