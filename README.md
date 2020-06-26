@@ -69,7 +69,7 @@ sayısal türev alma denklemi aynı şekilde burada da kullanılır.
 ### comments():
 
 Polinomlu ve polinomsuz türev hesaplamalarının arasındaki bu farkın neden olduğu yorum satırlarıyla
-kısaca açıklanmıştır. Yorumlar yorum.txt adlı bir dosya açılarak içerisine yazılmıştır.
+kısaca açıklanmıştır. Yorumlar, yorum.txt adlı bir dosya açılarak içerisine yazılmıştır.
 
 ## Kodun Çalıştırıldığı Yer
 
