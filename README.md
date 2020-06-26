@@ -19,7 +19,7 @@ sympy kütüphanesi import edilerek projede kullanılır.
 Yazmış olduğumuz kod içerisinde 8 farklı fonksiyon kullanılmıştır. Yazmış olduğum kodun kullanılış
 şeklini, kullanmış olduğum aşağıdaki fonksiyonları ve kullanılış amaçlarını anlatarak şöyle açıklayabiliriz:
 
-### readfile():
+### readFile():
 
 Bu fonksiyonumuzda asallar.txt dosyası içerisinde bulunan asal sayı değerleri tek tek çekilir,
 çekilen değerler asalDiziDegerler adlı diziye int tipinde olacak şekilde aktarılır.
